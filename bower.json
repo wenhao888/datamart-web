@@ -1,0 +1,13 @@
+{
+  "name": "datamart",
+  "version": "0.0.1",
+  "description": "my own project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
