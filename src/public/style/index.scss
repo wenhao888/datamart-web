@@ -1,0 +1,49 @@
+@import 'base.scss';
+
+
+body {
+  font-family: $font-family;
+  font-size: medium;
+  min-height: 100%;
+  background-color: aliceblue;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column
+}
+
+.LogoStyle {
+  display: inline-block;
+  background-color : orange;
+};
+
+.mainMenuBarStyle {
+  background-color:yellow;
+  height: $menuBar-height;
+  line-height: $menuBar-height;
+  flex-grow: 0;
+};
+
+
+ .mainContainer  {
+  flex-grow: 1
+};
+
+ul.mainMenuList {
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  li {
+    display:inline-block;
+    margin-right: 20px;
+  }
+}
+
+
+
+.footer {
+  height: $footer-height;
+  line-height: $footer-height;
+  flex-grow: 0;
+  background-color: red
+};

@@ -25,7 +25,7 @@ app.set('views', path.join(config.root, 'app/views'));
 app.engine('js', JsxEngine);
 app.set('view engine', 'js');
 
-app.use(express.static(path.join(config.root, 'static')));
+app.use(express.static(path.join(config.root, 'public')));
 //add middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

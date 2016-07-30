@@ -14,7 +14,7 @@ gulp.task("clean", ()=> {
 
 
 
-gulp.task("build",gulp.series(["clean", "copy_server_script", "copy_client_script"]));
+gulp.task("build",gulp.series(["clean", "copy_server_script", "copy_client_script","copy_client_style"]));
 
 
 

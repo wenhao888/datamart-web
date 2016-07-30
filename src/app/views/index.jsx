@@ -2,66 +2,36 @@ import React from "react";
 import Logo from './index/logo';
 import MainMenu from "./index/mainMenus"
 
-
-const bodyStyle = {
-    minHeight:"100%",
-    backgroundColor:"aliceblue",
-    padding:"0",
-    margin:"0",
-    display:"flex",
-    flexDirection: 'column'
+var logoStyle = {
+    marginLeft:"5px",
+    display:"inline-block"
 };
 
-const mainMenuBarStyle ={
-    backgroundColor:'yellow',
-    height:"100px",
-    lineHeight:"100px",
-    flexGrow: "0",
-};
-
-const mainMenuStyle ={
-    float:"right",
-    marginRight:"20px"
-};
-
-const mainContainerStyle = {
-    flexGrow: "1"
-};
-
-const footStyle = {
-    height: "80px",
-    lineHeight: "80px",
-    flexGrow: 0 ,
-    backgroundColor:"red",
-};
-
-
-const LogoStyle ={
-    display:"inline-block",
-    backgroundColor : "orange",
-    marginLeft:"15px"
+var menuContainerStyle = {
+    float: "right",
+    marginRight: "20px"
 };
 
 const Index = () => (
     <html>
        <head>
+           <link rel="stylesheet" href="/style/index.css"></link>
        </head>
 
-       <body style={bodyStyle}>
-          <div style={mainMenuBarStyle}>
-              <div style={LogoStyle}>
+       <body>
+          <div className="mainMenuBarStyle" >
+              <div style={logoStyle}>
                   <Logo/>
               </div>
-              <div style={mainMenuStyle}>
+              <div style={menuContainerStyle}>
                 <MainMenu />
               </div>
           </div>
-          <div style={mainContainerStyle}>
-
+          <div className="mainContainer">
                 this is my index page
           </div>
-          <div style={footStyle}>
-              this is footer
+          <div className="footer">
+               this is footer
           </div>
        </body>
     </html>
