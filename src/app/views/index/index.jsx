@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from './index/logo';
-import MainMenu from "./index/mainMenus"
+import Logo from './logo';
+import MainMenu from "./mainMenus"
 
 var logoStyle = {
     marginLeft:"5px",

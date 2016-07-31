@@ -6,3 +6,9 @@ gulp.task("copy_server_script", function() {
         .pipe(babel())
         .pipe(gulp.dest("./dist/"));
 });
+
+
+gulp.task("copy_server_views", function () {
+    return gulp.src(["./src/**/*.hbs"])
+        .pipe(gulp.dest("./dist/"));
+});

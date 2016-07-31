@@ -13,17 +13,17 @@ import favicon from 'serve-favicon';
 import config from './config';
 import controllers from './app/controllers';
 import logger from './app/helpers/logger';
-import JsxEngine from "./core/jsxEngine";
+import exphbs from 'express-handlebars';
+
 
 // EXPRESS SET-UP
 // create app
 const app = express();
 // use jade and set views and static directories
+app.set('views', config.viewPath);
+app.engine('.hbs', exphbs({defaultLayout: 'defaultLayout', layoutsDir: config.viewPath + "/layouts",  extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
-app.set('views', path.join(config.root, 'app/views'));
-
-app.engine('js', JsxEngine);
-app.set('view engine', 'js');
 
 app.use(express.static(path.join(config.root, 'public')));
 //add middlewares
