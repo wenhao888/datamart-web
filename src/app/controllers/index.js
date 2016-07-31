@@ -9,7 +9,7 @@ const router = Router();
 
 
 router.get('/', (req, res) => {
-  var html = jsxRender.render("index/index.js", {});
+  var html = jsxRender.render("index.js", {});
   respRender.render(res, {content: html});
 });
 
