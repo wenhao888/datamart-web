@@ -9,8 +9,8 @@ const router = Router();
 
 
 router.get('/', (req, res) => {
-  var html = jsxRender.render("index.js", {});
-  respRender.render(res, {content: html, script:'index.js', style:"index.css"});
+  var html = jsxRender.render("index/index.js", {});
+  respRender.render(res, {content: html, script:'index_browser.js', style:"index.css"});
 });
 
 

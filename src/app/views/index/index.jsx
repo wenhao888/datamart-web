@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from './index/logo';
-import MainMenu from "./index/mainMenus"
+import Logo from './logo';
+import MainMenu from "./mainMenus"
 
 var logoStyle = {
     marginLeft:"5px",
@@ -13,12 +13,7 @@ var menuContainerStyle = {
 };
 
 const Index = () => (
-    <html>
-       <head>
-           <link rel="stylesheet" href="/style/index.css"></link>
-       </head>
-
-       <body>
+    <div className="rootContainer">
           <div className="mainMenuBarStyle" >
               <div style={logoStyle}>
                   <Logo/>
@@ -33,8 +28,7 @@ const Index = () => (
           <div className="footer">
                this is footer
           </div>
-       </body>
-    </html>
+    </div>
 );
 
 export default  Index;
