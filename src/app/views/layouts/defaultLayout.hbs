@@ -1,10 +1,17 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/style/index.css"> </link>
+        {{#if style}}
+            <link rel="stylesheet" href="/style/{{{style}}}"> </link>
+        {{/if}}
     </head>
 
-    <body>
+    <body id="root">
         {{{content}}}
     </body>
+
+
+    {{#if script}}
+        <script src="/views/{{{script}}}"> </script>
+    {{/if}}
 
 </html>
