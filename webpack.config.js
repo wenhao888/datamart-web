@@ -17,16 +17,16 @@ var config =  {
         this.module.noParse.push(new RegExp(path));
     },
     resolve: {
-        alias: {
-            'react': bower_dir + '/react/react.min.js'
-        },
+        //alias: {
+        //    'react': bower_dir + '/react/react.min.js'
+        //},
         extensions: ['', '.js', '.jsx']
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+       // new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
     ],
     module: {
-        noParse: [bower_dir + '/react/react.min.js'],
+        //noParse: [bower_dir + '/react/react.min.js'],
         loaders: [
             {
                 test: /\.jsx$/,
@@ -43,8 +43,7 @@ var config =  {
             }
         ]
     }
-
 };
 
-config.addVendor('react', bower_dir + '/react/react.min.js');
+//config.addVendor('react', bower_dir + '/react/react.min.js');
 module.exports = config;
