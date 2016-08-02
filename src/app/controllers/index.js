@@ -2,14 +2,15 @@
 
 
 import { Router } from 'express';
-import jsxRender  from "../../core/jsxRender";
+import fluxer from "fluxer";
+import index from "../views/index/index";
 import respRender from "../../core/respRender";
 
 const router = Router();
 
 
 router.get('/', (req, res) => {
-  var html = jsxRender.render("index/index.js", {});
+  var html = fluxer("index", index);
   respRender.render(res, {content: html, script:'index_browser.js', style:"index.css"});
 });
 
