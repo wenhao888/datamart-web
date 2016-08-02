@@ -6,14 +6,13 @@ import { createStore } from 'redux'
 
 var fluxer = fluxerFactoy(document);
 
-
-fluxer.render("index", ()=> {
-   let store = createStore((state, action) => {
-      return state;
-   });
-   return (
-       <Provider store={store}>
-          <Index />
-       </Provider>)
+let store = createStore((state, action) => {
+    return state;
 });
+
+fluxer.render("index", ()=> (
+    <Provider store={store}>
+        <Index />
+    </Provider>)
+);
 
