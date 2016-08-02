@@ -1,12 +1,10 @@
 var webpack = require("webpack");
 var path = require("path");
 
-var bower_dir = __dirname + '/bower_components';
-
 var config =  {
     entry :{
         index_browser: [path.join(__dirname, "/src/app/views/index_browser.js")],
-        vendors: ['react','react-dom']
+        vendors: ['react','react-dom', 'jquery']
     },
     output: {
         path: path.join(__dirname, "/dist/public/views/"),
