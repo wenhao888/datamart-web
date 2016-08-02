@@ -1,6 +1,6 @@
 
-var Index  = require("./index/index").default;
-var fluxer = require("fluxer");
+import Index from "./index/index";
+import fluxerFactoy from "fluxer";
 
-var fluxer = fluxer(document);
+var fluxer = fluxerFactoy(document);
 fluxer.render("index", Index);

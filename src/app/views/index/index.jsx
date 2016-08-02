@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from './logo';
 import MainMenu from "./mainMenus"
+import TestContainer from "./testContainer";
 
 var logoStyle = {
     marginLeft:"5px",
@@ -23,7 +24,7 @@ const Index = () => (
               </div>
           </div>
           <div className="mainContainer">
-                this is my index page
+               <TestContainer/>
           </div>
           <div className="footer">
                this is footer
