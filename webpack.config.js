@@ -3,7 +3,7 @@ var path = require("path");
 
 var config =  {
     entry :{
-        index_browser: [path.join(__dirname, "/src/app/views/index_browser.js")],
+        index_browser: [path.join(__dirname, "/src/app/views/Index_browser.js")],
         vendors: ['react','react-dom', 'jquery']
     },
     output: {

@@ -2,9 +2,7 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 
 
-//import webpack from "webpack-stream";
 import webpackConfig from "../webpack.config";
-//import named from 'vinyl-named';
 
 
 import gutil from "gulp-util";

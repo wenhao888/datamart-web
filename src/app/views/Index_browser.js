@@ -1,5 +1,5 @@
 import React from "react";
-import Index from "./index/index";
+import Index from "./index/Index";
 import fluxerFactoy from "fluxer";
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
