@@ -5,7 +5,13 @@ class MessageList extends  React.Component {
     render () {
         return (
             <div>
-                {this.props.messages.length}
+                {
+                    this.props.messages.map((e,i)=> (
+                        <p key={i}>
+                            {e}
+                        </p>
+                    ))
+                }
             </div>
         )
     }
