@@ -21,7 +21,7 @@ var menuContainerStyle = {
 var Home = React.createClass({
     getInitialState: function () {
         this.store = createStore(reducer);
-        this.store.dispatch({type: "initialize", state: {messages: ["hello"]}});
+        this.store.dispatch({type: "initialize", state: {messages: ["message1", "message2","message3"]}});
         return {};
     },
     render: function () {

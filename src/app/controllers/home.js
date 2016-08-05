@@ -13,13 +13,10 @@ const router = Router();
 
 router.get('/', (req, res) => {
     var data = {
-        messages:['hello']
+        messages:['message1', "message2", "message3"]
     };
 
-    var html = fluxer("home", ()=> (
-        <Home />
-        ), data);
-
+    var html = fluxer("home",Home, data);
     respRender.render(res, {content: html, script: 'home_browser.js', style: "index.css"});
 });
 
