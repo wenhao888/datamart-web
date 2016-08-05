@@ -11,7 +11,7 @@ import helmet from 'helmet';
 import favicon from 'serve-favicon';
 // local
 import config from './config';
-import controllers from './app/controllers';
+import controllers from './app/controllers/home';
 import logger from './app/helpers/logger';
 import exphbs from 'express-handlebars';
 
