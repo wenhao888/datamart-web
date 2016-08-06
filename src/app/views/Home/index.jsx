@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from './Logo';
+import Logo from '../shared/Logo';
 import MainMenu from "./MainMenus"
 import MessageList from "./MessageList";
 import {Provider} from 'react-redux'
