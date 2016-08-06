@@ -4,6 +4,7 @@ var path = require("path");
 var config =  {
     entry :{
         home_browser: [path.join(__dirname, "/src/app/views/home_browser.js")],
+        workspace_browser: [path.join(__dirname, "/src/app/views/workspace_browser.js")],
         vendors: ['react','react-dom', 'jquery']
     },
     output: {

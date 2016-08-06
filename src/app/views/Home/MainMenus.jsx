@@ -13,6 +13,9 @@ const MainMenus= (props)=> (
         <li>
             Registration
         </li>
+        <li>
+            <a href="/workspace"> workspace </a>
+        </li>
     </ul>
 
 );
