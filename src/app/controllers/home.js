@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
 
 
 router.get("/workspace", (req, res) => {
-    match({routes: routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    match({routes: routes, location: req.url}, (error, redirectLocation, renderProps) => {
         var data = {
             messages:['message1', "message2", "message3"]
         };
