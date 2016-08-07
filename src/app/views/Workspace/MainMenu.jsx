@@ -1,15 +1,11 @@
 import React from 'react';
 
+import { Router, Route, Link, browserHistory } from 'react-router'
 
 
 const MainMenus= (props)=> (
     <ul className="mainMenuList">
-        <li>
-            Profile
-        </li>
-        <li>
-            dashboard
-        </li>
+
         <li>
            <a href="/"> Log out </a>
         </li>

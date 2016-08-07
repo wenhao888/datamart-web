@@ -1,6 +1,7 @@
 import React from "react";
 import fluxerFactoy from "fluxer";
-import Workspace from "./Workspace"
+import { Router, browserHistory } from 'react-router'
+import routes from "./Workspace/routes";
 
 var fluxer = fluxerFactoy(document);
-fluxer.render("workspace", Workspace);
+fluxer.render("workspace", ()=> (<Router history={browserHistory} routes={routes} />));
