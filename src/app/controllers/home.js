@@ -4,10 +4,17 @@ import React from "react";
 import {Router} from 'express';
 import fluxer from "fluxer";
 
+import { renderToString } from 'react-dom/server'
+
+
 
 import Home from "../views/Home";
-import Workspace from "../views/Workspace"
+import { match, RouterContext } from 'react-router'
+import routes from '../views/Workspace/routes'
+
+
 import respRender from "../../core/respRender";
+
 
 const router = Router();
 
@@ -23,9 +30,11 @@ router.get('/', (req, res) => {
 
 
 router.get("/workspace", (req, res) => {
-   var html = fluxer("workspace", Workspace);
-    respRender.render(res, {content: html, script: 'workspace_browser.js', style: "index.css"});
+    match({routes: routes, location: req.url }, (error, redirectLocation, renderProps) => {
+        var html = fluxer("workspace", () => (<RouterContext {...renderProps} />) );
+        respRender.render(res, {content: html, script: 'workspace_browser.js', style: "index.css"});
 
+    });
 });
 
 export default router;
