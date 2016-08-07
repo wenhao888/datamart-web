@@ -8,10 +8,6 @@ import Home from "../views/Home";
 import { match, RouterContext } from 'react-router'
 import routes from '../views/Workspace/routes'
 
-
-import respRender from "../../core/respRender";
-
-
 const router = Router();
 
 
@@ -21,7 +17,7 @@ router.get('/', (req, res) => {
     };
 
     var html = fluxer("home",Home, data);
-    respRender.render(res, {content: html, script: 'home_browser.js', style: "index.css"});
+    res.render('templates/default', {content: html, script: 'home_browser.js', style: "index.css"});
 });
 
 
@@ -32,7 +28,7 @@ router.get("/workspace", (req, res) => {
         };
 
         var html = fluxer("workspace", () => (<RouterContext {...renderProps} />), data );
-        respRender.render(res, {content: html, script: 'workspace_browser.js', style: "index.css"});
+        res.render('templates/default', {content: html, script: 'workspace_browser.js', style: "index.css"});
 
     });
 });

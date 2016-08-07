@@ -21,7 +21,7 @@ import exphbs from 'express-handlebars';
 const app = express();
 // use jade and set views and static directories
 app.set('views', config.viewPath);
-app.engine('.hbs', exphbs({defaultLayout: 'defaultLayout', layoutsDir: config.viewPath + "/layouts",  extname: '.hbs'}));
+app.engine('.hbs', exphbs({defaultLayout: null, layoutsDir: config.viewPath + "/templates",  extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
 
